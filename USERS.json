@@ -1,0 +1,25 @@
+[{
+    "first_name": "Silvio",
+    "last_name": "Bers",
+    "address1": "301 Langdon Lane",
+    "address2": "ontario",
+    "address3": "P8A 777",
+    "disasterId": "2016-06-25-NorthwestOntario-Flood",
+    "claim_number": "000150",
+    "claim_name": "BersSilvio",
+    "title": "Mr.",
+    "pay_amount": "3,500.00",
+    "reviewer": "Robert Scherf"
+}, {
+    "first_name": "Barr",
+    "last_name": "Smith",
+    "address1": "Ficklestein \n Coutt, Barrie ON \n P7A 8J6",
+    "address2": "ontario",
+    "address3": "P8A 777",
+    "disasterId": "2016-06-25-NorthwestOntario-Flood",
+    "claim_number": "000151",
+    "claim_name": "SmithBarr",
+    "title": "Mr.",
+    "pay_amount": "113,500.00",
+    "reviewer": "Robert Scherf"
+}]
