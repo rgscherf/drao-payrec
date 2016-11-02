@@ -26,6 +26,7 @@ def fill_template(doctype, user):
     doc_metadata = {
         "decision": {
             "template_path": "templates/TemplateDecisionNotice.docx",
+            "template_path_nopay": "templates/TemplateDecisionNoticeNoPay.docx",
             "output_path": "outputs/{0}/DecisionNotice_Final({1}).docx"
         },
         "recommendation": {
@@ -34,7 +35,11 @@ def fill_template(doctype, user):
         },
     }
 
-    doc = DocxTemplate(doc_metadata[doctype]["template_path"])
+    # when CL recommends no payment
+    if doctype == "decision" and user["pay_amount"] == "0":
+        doc = DocxTemplate(doc_metadata[doctype]["template_path_nopay"])
+    else:
+        doc = DocxTemplate(doc_metadata[doctype]["template_path"])
     doc.render(user)
     full_claim_name = user["claim_number"] + "-" + user["claim_name"]
     make_claimant_dir(full_claim_name)
